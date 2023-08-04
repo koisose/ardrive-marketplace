@@ -28,30 +28,6 @@ export const Faucet = () => {
 
   const faucetTxn = useTransactor(localWalletClient);
 
-  useEffect(() => {
-    const getFaucetAddress = async () => {
-      try {
-        const accounts = await localWalletClient.getAddresses();
-        setFaucetAddress(accounts[FAUCET_ACCOUNT_INDEX]);
-      } catch (error) {
-        notification.error(
-          <>
-            <p className="font-bold mt-0 mb-1">Cannot connect to local provider</p>
-            <p className="m-0">
-              - Did you forget to run <code className="italic bg-base-300 text-base font-bold">yarn chain</code> ?
-            </p>
-            <p className="mt-1 break-normal">
-              - Or you can change <code className="italic bg-base-300 text-base font-bold">targetNetwork</code> in{" "}
-              <code className="italic bg-base-300 text-base font-bold">scaffold.config.ts</code>
-            </p>
-          </>,
-        );
-        console.error("⚡️ ~ file: Faucet.tsx:getFaucetAddress ~ error", error);
-      }
-    };
-    getFaucetAddress();
-  }, []);
-
   const sendETH = async () => {
     if (!faucetAddress) {
       return;

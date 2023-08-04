@@ -16,15 +16,7 @@ export const Footer = () => {
     <div className="min-h-0 p-5 mb-11 lg:mb-0">
       <div>
         <div className="fixed flex justify-between items-center w-full z-10 p-4 bottom-0 left-0 pointer-events-none">
-          <div className="flex space-x-2 pointer-events-auto">
-            {nativeCurrencyPrice > 0 && (
-              <div className="btn btn-primary btn-sm font-normal cursor-auto">
-                <CurrencyDollarIcon className="h-4 w-4 mr-0.5" />
-                <span>{nativeCurrencyPrice}</span>
-              </div>
-            )}
-            {getTargetNetwork().id === hardhat.id && <Faucet />}
-          </div>
+          <div className="flex space-x-2 pointer-events-auto"></div>
           <SwitchTheme className="pointer-events-auto" />
         </div>
       </div>
@@ -33,7 +25,7 @@ export const Footer = () => {
           <div className="flex justify-center items-center gap-2 text-sm w-full">
             <div>
               <a
-                href="https://github.com/scaffold-eth/se-2"
+                href="https://github.com/koisose/ardrive-marketplace"
                 target="_blank"
                 rel="noreferrer"
                 className="underline underline-offset-2"
@@ -42,28 +34,7 @@ export const Footer = () => {
               </a>
             </div>
             <span>·</span>
-            <div>
-              Built with <HeartIcon className="inline-block h-4 w-4" /> at 🏰{" "}
-              <a
-                href="https://buidlguidl.com/"
-                target="_blank"
-                rel="noreferrer"
-                className="underline underline-offset-2"
-              >
-                BuidlGuidl
-              </a>
-            </div>
-            <span>·</span>
-            <div>
-              <a
-                href="https://t.me/joinchat/KByvmRe5wkR-8F_zz6AjpA"
-                target="_blank"
-                rel="noreferrer"
-                className="underline underline-offset-2"
-              >
-                Support
-              </a>
-            </div>
+            <div>Built with</div>
           </div>
         </ul>
       </div>

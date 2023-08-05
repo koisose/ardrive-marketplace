@@ -6,18 +6,18 @@ export const Explore = () => {
       <h1 className="text-center mb-8">
         <span className="block text-4xl font-bold">Explore Public Ardrive</span>
       </h1>
-      <div className="flex justify-center items-center gap-12 sm:flex-row">
-        <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
-          <p>First pick your ardrive public drive</p>
-        </div>
-
-        <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
-          <p>Pick UDL license you like</p>
-        </div>
-
-        <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
-          <p>Wait, for somebody to make an offer so that they can see your public ardrive</p>
-        </div>
+      <div className="grid 2xl:grid-cols-3 xl:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 xs:grid-cols-1 gap-4 justify-items-center 2xl:max-2xl:w-4/6 xl:w-full md:w-full mx-auto">
+        {[1, 2, 3, 4, 5, 6].map(a => (
+          <div className="card bg-primary 2xl:w-96 xl:w-96 w-full text-primary-content">
+            <div className="card-body">
+              <h2 className="card-title">Card {a}</h2>
+              <p>Content for card {a}</p>
+              <div className="card-actions justify-end">
+                <button className="btn">Button</button>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
